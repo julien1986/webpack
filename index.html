@@ -22,8 +22,10 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700" rel="stylesheet" />
     </head>
     <body>
+        <%= require("html-loader!./src/partials/header.html") %>
         <h1>Liste des bières</h1>
         <ul class="list"></ul>
+        <%= require("html-loader!./src/partials/footer.html") %>
         <script async defer src="https://buttons.github.io/buttons.js"></script>
         <!-- Global Site Tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101423651-2"></script>

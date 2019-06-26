@@ -1,6 +1,7 @@
 const path = require('path');
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const htmlLoader = require('html-loader');
 
 module.exports = {
     devtool: 'eval-cheap-module-source-map',
@@ -14,6 +15,15 @@ module.exports = {
     },
     module: {
         rules: [
+            {
+                test: /\.(html)$/,
+                use: {
+                    loader: 'html-loader',
+                    options: {
+                        attrs [':data-src']
+                    }
+                }
+            },
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
