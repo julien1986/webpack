@@ -6,9 +6,9 @@ let url = "https://opendata.visitflanders.org/tourist/brands/beer_styles.json?pa
 
 Axios.get(url)
     .then(function(response) {
-        console.log(response);
+        console.log(response.data);
     })
-    .catch(console.log("eror"));
+    .catch(console.log("error"));
 
 document.addEventListener("DOMContentLoaded", () => {
     const pluginsTriggerElement = document.getElementById("plugins-trigger");
