@@ -1,3 +1,4 @@
+require("./../styles/ajax.scss");
 import Axios from "axios";
 
 const url = "https://opendata.visitflanders.org/tourist/brands/beer_styles.json?page=1&page_size=500&limit=1";
@@ -19,9 +20,9 @@ Axios.get(url).then(function(response) {
         });
         console.log(found);
         if (!found) {
-            list.innerHTML += `<li>${element.Name_en} : ${element.BeerStyle_en} - <a  data-id="${element.Name_en}" href="#">Ajouter au favoris</a></li>`;
+            list.innerHTML += `<li><strong>${element.Name_en}</strong> : ${element.BeerStyle_en} - <a  data-id="${element.Name_en}" href="#">Ajouter au favoris</a></li>`;
         } else {
-            list.innerHTML += `<li>${element.Name_en} : ${element.BeerStyle_en} - <a class="favoris" data-id="${element.Name_en}" href="#">Retirer des favoris</a></li>`;
+            list.innerHTML += `<li><strong>${element.Name_en}</strong> : ${element.BeerStyle_en} - <a class="favoris" data-id="${element.Name_en}" href="#">Retirer des favoris</a></li>`;
         }
     });
 
