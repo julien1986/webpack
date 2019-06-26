@@ -1,6 +1,14 @@
 .list {
     text-align: left;
     list-style: none;
+
+    > li {
+        margin: 1rem 0 0 0;
+
+        > a {
+            margin-left: 1rem;
+        }
+    }
 }
 
 .favoris {
